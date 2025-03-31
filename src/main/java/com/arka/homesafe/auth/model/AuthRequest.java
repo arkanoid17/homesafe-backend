@@ -1,9 +1,8 @@
-package com.arka.homesafe.auth.model.auth;
+package com.arka.homesafe.auth.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.stereotype.Component;
 
 @Data
 @NoArgsConstructor
@@ -11,6 +10,8 @@ import org.springframework.stereotype.Component;
 public class AuthRequest {
     private String email;
     private String password;
+    private String name;
+    private String role;
 
     public String getEmail() {
         return email;
@@ -26,5 +27,21 @@ public class AuthRequest {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

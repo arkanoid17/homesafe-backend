@@ -1,5 +1,6 @@
-package com.arka.homesafe.auth.model.user;
+package com.arka.homesafe.user.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,6 +22,7 @@ import java.util.Set;
         private String email;
 
         @Column(nullable = false)
+        @JsonIgnore
         private String password;
 
         @Column(nullable = false)
@@ -33,16 +35,16 @@ import java.util.Set;
         @Column(nullable = false)
         private Boolean isActive = true;
 
-        @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-        private Set<Address> addresses = new HashSet<>();
-
-        public Set<Address> getAddresses() {
-            return addresses;
-        }
-
-        public void setAddresses(Set<Address> addresses) {
-            this.addresses = addresses;
-        }
+//        @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//        private Set<Address> addresses = new HashSet<>();
+//
+//        public Set<Address> getAddresses() {
+//            return addresses;
+//        }
+//
+//        public void setAddresses(Set<Address> addresses) {
+//            this.addresses = addresses;
+//        }
 
         public Boolean getActive() {
             return isActive;

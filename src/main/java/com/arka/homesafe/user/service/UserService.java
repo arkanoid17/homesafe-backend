@@ -1,6 +1,6 @@
-package com.arka.homesafe.auth.service;
+package com.arka.homesafe.user.service;
 
-import com.arka.homesafe.auth.model.user.User;
+import com.arka.homesafe.user.model.User;
 import com.arka.homesafe.auth.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +25,5 @@ public class UserService {
         return userRepo.findById(id).orElse(null);
     }
 
-    public User getUserByEmail(String email) {
-        return userRepo.findUserByEmail(email);
-    }
+
 }

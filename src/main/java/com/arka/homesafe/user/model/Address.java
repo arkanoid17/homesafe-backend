@@ -1,11 +1,11 @@
-package com.arka.homesafe.auth.model.user;
+package com.arka.homesafe.user.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "addresses")
+@Table(name = "address")
 @Getter
 @Setter
 @NoArgsConstructor

@@ -1,4 +1,4 @@
-package com.arka.homesafe.auth.model.user;
+package com.arka.homesafe.user.model;
 
 
 public enum UserRole {
